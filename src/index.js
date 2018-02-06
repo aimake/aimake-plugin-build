@@ -47,11 +47,10 @@ function clientWebpackConfig(config) {
 async function execute(config) {
   const {
     aimakeOptions,
-    options,
     webpackConfig,
     webpackOptions,
   } = config;
-  if (!(aimakeOptions.webpack.buildRemove === false)) {
+  if (aimakeOptions.webpack && !(aimakeOptions.webpack.buildRemove === false)) {
     await clean(webpackOptions);
   }
   await build(webpackConfig);

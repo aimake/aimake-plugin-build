@@ -47,6 +47,7 @@ function clientWebpackConfig(config) {
 async function execute(config) {
   const {
     aimakeOptions,
+    options,
     webpackConfig,
     webpackOptions,
   } = config;
